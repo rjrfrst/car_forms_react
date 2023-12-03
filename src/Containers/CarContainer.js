@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Car from "../Components/Car";
 
 const CarContainer = () => {
 
@@ -40,8 +41,12 @@ const CarContainer = () => {
             }
         ]
     )
+    //
+    const carComponents = listOfCars.map((carName, index) => <Car car ={car} key={index}/>)
 
-    return (  );
+    return ( 
+        {carComponents}
+     );
 }
  
 export default CarContainer;
